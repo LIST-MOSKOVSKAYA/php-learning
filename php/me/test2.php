@@ -14,7 +14,6 @@ $animals = array(
 );
 $animalsTwo = array();
 echo '<h2> Исходный массив </h2>';
-
 foreach ($animals as $country => $massive) {
   echo "<i><b>$country</i></b>"."\r\n";
   foreach ($massive as $inner_key => $value) {
@@ -40,7 +39,6 @@ $split = explode(" ", $animalsTwo[$i]);
 $y = $split[count($split)-1];
 array_push($animalsLastWord, $y);
 }
-
 echo "<p><i>Промежуточные массивы</i></p>";
 foreach ($animalsFirstWord as $i => $value) {
 echo  $value.', ';
@@ -49,7 +47,6 @@ echo "</br>";
 foreach ($animalsLastWord as $i => $value) {
 echo  $value.', ';
 }
-
 $animalsNew = array();
 for ($i = 0; $i <= count($animalsFirstWord) * count($animalsLastWord); $i++) {
   $x = array_rand($animalsFirstWord);
@@ -60,7 +57,6 @@ for ($i = 0; $i <= count($animalsFirstWord) * count($animalsLastWord); $i++) {
     $w = $z;
 }
 }
-
   echo "</br>";
   echo "Итоговый массив </br>";
   foreach ($animalsNew as $key => $value) {
